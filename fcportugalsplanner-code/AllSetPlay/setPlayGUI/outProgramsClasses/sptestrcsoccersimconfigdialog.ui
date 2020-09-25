@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>SpTestRCSoccerSimConfigDialog</class>
+ <widget class="QDialog" name="SpTestRCSoccerSimConfigDialog">
+  <property name="windowModality">
+   <enum>Qt::ApplicationModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>792</width>
+    <height>384</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>792</width>
+    <height>384</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>792</width>
+    <height>384</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Team configurations for 2D test game...</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="1" column="0" colspan="3">
+    <widget class="QGroupBox" name="groupBox_2">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="title">
+      <string>Team Settings</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_3">
+      <item row="3" column="0">
+       <widget class="QLabel" name="label_4">
+        <property name="text">
+         <string>Team script</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="1">
+       <widget class="QLineEdit" name="teamScriptPathLine"/>
+      </item>
+      <item row="3" column="2">
+       <widget class="QPushButton" name="teamScriptButton">
+        <property name="text">
+         <string>search...</string>
+        </property>
+       </widget>
+      </item>
+      <item row="6" column="1">
+       <widget class="QLineEdit" name="teamSetPlayFilePathLine"/>
+      </item>
+      <item row="6" column="2">
+       <widget class="QPushButton" name="teamSetPlayFileButton">
+        <property name="text">
+         <string>search...</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QLineEdit" name="teamDirectoryPathLine"/>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="label_3">
+        <property name="text">
+         <string>Team directory</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="2">
+       <widget class="QPushButton" name="teamDirectoryButton">
+        <property name="text">
+         <string>search...</string>
+        </property>
+       </widget>
+      </item>
+      <item row="6" column="0">
+       <widget class="QLabel" name="label_5">
+        <property name="text">
+         <string>Team SetPlay file</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="0" column="0" colspan="3">
+    <widget class="QGroupBox" name="groupBox_3">
+     <property name="title">
+      <string>General Settings</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_4">
+      <item row="0" column="0">
+       <widget class="QLabel" name="label">
+        <property name="text">
+         <string>Log Files Directory</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QLineEdit" name="logFilesDirectoryPathLine"/>
+      </item>
+      <item row="0" column="2">
+       <widget class="QPushButton" name="logFilesDirectoryButton">
+        <property name="text">
+         <string>search...</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="label_2">
+        <property name="text">
+         <string>Simmulator executable</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QLineEdit" name="simulatorExecutablePathLine"/>
+      </item>
+      <item row="1" column="2">
+       <widget class="QPushButton" name="simulatorExecutableButton">
+        <property name="text">
+         <string>search...</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="3" column="0" colspan="3">
+    <widget class="QGroupBox" name="opponentGroup">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>774</width>
+       <height>96</height>
+      </size>
+     </property>
+     <property name="title">
+      <string>Opponent Settings</string>
+     </property>
+     <property name="checkable">
+      <bool>true</bool>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_2">
+      <property name="margin">
+       <number>9</number>
+      </property>
+      <item row="1" column="1">
+       <widget class="QLineEdit" name="opponentScriptPathLine"/>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="label_9">
+        <property name="text">
+         <string>Opponent script</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="2">
+       <widget class="QPushButton" name="opponentScriptButton">
+        <property name="text">
+         <string>search...</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="0">
+       <widget class="QLabel" name="label_6">
+        <property name="text">
+         <string>Opponent directory</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QLineEdit" name="opponentDirectoryPathLine"/>
+      </item>
+      <item row="0" column="2">
+       <widget class="QPushButton" name="opponentDirectoryButton">
+        <property name="text">
+         <string>search...</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="5" column="0">
+    <widget class="QPushButton" name="cancelButton">
+     <property name="text">
+      <string>Cancel</string>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="2">
+    <widget class="QPushButton" name="resetButton">
+     <property name="text">
+      <string>Reset</string>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="1">
+    <widget class="QPushButton" name="testButton">
+     <property name="text">
+      <string>Test !</string>
+     </property>
+     <property name="default">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <tabstops>
+  <tabstop>logFilesDirectoryPathLine</tabstop>
+  <tabstop>logFilesDirectoryButton</tabstop>
+  <tabstop>simulatorExecutablePathLine</tabstop>
+  <tabstop>simulatorExecutableButton</tabstop>
+  <tabstop>teamDirectoryPathLine</tabstop>
+  <tabstop>teamDirectoryButton</tabstop>
+  <tabstop>teamScriptPathLine</tabstop>
+  <tabstop>teamScriptButton</tabstop>
+  <tabstop>teamSetPlayFilePathLine</tabstop>
+  <tabstop>teamSetPlayFileButton</tabstop>
+  <tabstop>opponentGroup</tabstop>
+  <tabstop>opponentDirectoryPathLine</tabstop>
+  <tabstop>opponentDirectoryButton</tabstop>
+  <tabstop>opponentScriptPathLine</tabstop>
+  <tabstop>opponentScriptButton</tabstop>
+  <tabstop>cancelButton</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>

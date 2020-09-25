@@ -1,0 +1,4 @@
+lib_libsetplay_a-visitor.o: setplay/clang/visitor.cc \
+ /usr/include/stdc-predef.h
+
+/usr/include/stdc-predef.h:

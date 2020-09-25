@@ -1,0 +1,11 @@
+Create an action to run to their offside line.
+
+Limit available setplays to the ones present in strategy file.
+
+Invert setplays by mirroring regions form left to right and v.v. [DONE]
+
+Include ball position and vel in setplay messages. [DONE? Not sure if it is working.]
+
+Implement goalie's pos in free_kick through move. [DONE]
+
+Finish implementation of all relevantPlayer methods... Some are simply returning NULL!

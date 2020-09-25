@@ -1,0 +1,14 @@
+<RCC>
+    <qresource prefix="/new/images">
+        <file>setPlayGUI/images/vision.jpeg</file>
+        <file>setPlayGUI/images/tshirtSelected.png</file>
+        <file>setPlayGUI/images/tshirtGhost.png</file>
+        <file>setPlayGUI/images/tshirt.png</file>
+        <file>setPlayGUI/images/showHide.jpeg</file>
+        <file>setPlayGUI/images/numbers.jpeg</file>
+        <file>setPlayGUI/images/line.jpeg</file>
+        <file>setPlayGUI/images/exit.jpeg</file>
+        <file>setPlayGUI/images/configuration_edit.png</file>
+        <file>setPlayGUI/images/ball.png</file>
+    </qresource>
+</RCC>

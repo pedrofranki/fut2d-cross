@@ -769,7 +769,7 @@ Strategy::updatePosition( const WorldModel & wm )
                         Vector2D y1( wm.offsideLineX(), -34.0);
                         Vector2D y2( wm.offsideLineX(), 34.0);
 
-                        if (wm.ball().pos().x > 55)
+                        if (wm.ball().pos().x > 25.0)
                         {
                                 if (wm.ball().pos().y < 0.0)
                                         y2.y = 20.0;

@@ -1,0 +1,130 @@
+27/06/2011 FA Após fazer alterações a 1 setplay já existente por vezes surge na step condition
+o seguinte (and (bowner :players PlayerX) (bowner :players PlayerY)) => Apesar de ser possível acontecer no jogo isto não é desejável do ponto de vista do plano
+27/06/2011 FA Na abort condition incluir também nos playmodes a desconsiderar (playm ag_our). Por exemplo se for um kick-in deveria aparecer algo do género (bowner :players (player :team opp :number 0) (and (not (playm play_on) (playm ki_our) (playm ag_our))) => Isto servirá para prevenir que após a marcação de um golo, caso a setplay tenha corrido bem não seja marcada como falhada. Isto por vezes acontece, parece-me poder ser um bug da framework/agente. Como após um golo o playmode transita sempre para kick-off (e.g. ko_opp) não existe problema de ele nunca dar a setplay como terminada.
+26/06/2011 FA Após um shoot na penalty area colocar conditição do ultimo step (playm ag_our) em vez de (playm play_on) => Pa dar success no CBR
+26/06/2011 FA Existe a possibilidade do tempo estar a andar sem ser no playmode play_on após um set-piece. Colocar por exemplo para goal_kick (or (playm play_on) (playm gk_our)) nos steps após o 1º
+
+##########################
+
+CRITICO: transicoes... duas para o mesmo step... :permitir mover um jogador... (ter em atencao se ele é o taker.. se a bola esta parada) << ISTO DA MUITA CONFUSAO
+
+==========
+
+-->Grande prioridade:
+ao importar dummy da merda porque pode ficar coisas fora do campo...
+ingles!
+verificar os todo's
+as teclas tao a foder a o log player... as direcionais
+
+-->Media prioridade:
+ajuda pdf
+quando se fecha um dos outros programas, a aplicacao esta freeze... --> barra de loading para teste e debug
+passforward vs pass --> ´
+field ter mensagem de erro!
+legenda no relvado
+dar oportunidade de eliminar todos os teps a partir de um step X
+as caixas do player editor em relativos
+Quando se remove um run, ou se adiciona... verificar se tem passe..e se nao deixar!
+
+-->Minima prioridade:
+aumentar area do show para nao aparecer cortado
+limpar qdebugs()
+mensagem de informacao quando o abort time e menor que o wait
+a label de posicao fica em cima do campo... (solucao.. minimo 800/600)
+switch taker... se nao tiver acoes
+poder alterar regiao a meio (no caso de play on... on livres ... )
+retirar poder fazer transicao para passo anterior
+-poder mover jogadores de outros steps 
+-enquanto isto de cima nao der proibir reposicionamentos
+indicar ficheiro que ta a guardar na tab
+melhorar o dividir do lado direito da interface
+chamar os kills dos clientes quando acaba um teste e nao se deseja fravar os logs
+permitir alterar o caminho do ficheiro de output de stoud e sterr da execucao do script do fcportugal.
+
+--> Nada prioritario:
+pensar no agrupamento de setplays e como lidar com elas.
+
+--> erros talvez ja corrigidos:
+erro a abrir ficheiro no show 
+quando se elimina accoes... eliminar condicoes! 
+desconstrutor
+
+--> erros ainda existentes nao importantes:
+verificar pk nao importa... com ficheiros normais
+
+--> erros framework:
+o jogador 11 nao entra porque o guardaredes nao e carregado! <-- corrigido: deixar mais tempo de espera na execucao dos clientes na execucao dos scripts
+act stop nao ta implementado :-/ o dribble parece que n!
+o intercept nao esta a ser acionado por problema do setplay
+nao ha instanciacao no step 0 para bowner e para relativos a players 
+
+--> melhorias framework:
+parser... ter um output de jeito...
+
+LOGGING
+NExt corner
+NExt throw in
+Next xpto
+
+Icones:
+Import
+Export
+Exit
+New
+Setplay
+test
+debug
+watch
+
+========= 
+PERGUNTAS:
+player velocity =  baseei-me no float SpeedUtils::PlayerCycles(float dist) (player/ utils speed)
+Relativos a pontos... QUE PONTOS?? <-- 
+o taker quando tem ainda a bola pode ser relativo?
+
+
+tese indice
+escala de usabilidade
+desempenho e/ou usabilidade
+
+============
+outros
+
+nomes de variaveis... 
+alinhar as coisas com o 0.5 mais proximo. (as caixas da spin box nao tao a funcionar (solucao... criar as spinbox a la pata))
+limite do setplay... jogavel..tipo jogada esquerda se entrar na direita para etc etc
+2d 3d etc etc
+nas spinbox calcular automaticamente o maximo e o minino para relativos
+rever se no sppoint os realpoint etc precisam mesmo de ser apontadores
+linha de fora de jogo
+simulador, debugger.. melhorar codigo
+Qmessagebox..  QMessageBox::warning (todo codigo)
+================
+
+
+============
+
+STAND BY
+
+- Descritivo" e "Regra" 	e.g. "Opponent team gets ball possession" => "(bowner :players (player :team opp :number 0))" => Poder juntar estes pequenos trechos de condições sem que o utilizador 
+- abort transition ... e necessario?
+
+
+======================
+
+-> o pk de nao aceitar todo o setplay:
+- regioes sem serem "named"
+- parametros
+- relativos
+
+=============
+Decisões
+
+O porque de não utilizar os typedef e enumeracoes declaradas em clang etc:
+R: Para tornar genérico, isto é, se numa fase posterior, outra equipa quiser utilizar a aplicação, tendo código diferente, so preciso de reimplementar o parser (spporting).
+
+
+=========
+set e get do invetable
+print do invertable ser true ou false
+

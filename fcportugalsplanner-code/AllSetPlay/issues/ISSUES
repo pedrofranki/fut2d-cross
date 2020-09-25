@@ -1,0 +1,11 @@
+19/06/11 FA Segmentation fault after editing a setplay too many times (occured when creating a right corner-kick setplay with 4 players and re-editing actions from a previously existing setplay of 3 players)
+19/06/11 FA Error when exporting corner-kick right setplay with 5 players (segmentation fault => also when re-editing a 4 players corner kick setplay. Just added on player at step 0 and afterwards say in step 2 changed the setplay in order for this player to receive the ball and pass it to another team player)
+19/06/11 FA Reestruturar os menus da seguinte forma:
+	File: New, Import (julgo que não faz sentido diferenciar entre diferentes tipos de setplays... => isto deveria ser transparente para a tua app no futuro, a partir do momento em que fosse acrescentado um plugin que permitisse filtrar por novos tipos de setplays). A opção Export... também deveria ficar no menu File (em vez de no "Setplay") e só deverá ficar activa a partir do momento que estiver focado 1 separador de 1 setplay. Colocar também a ainda a opção de carregar um gamelog "Load game log..." no menu "File".
+	Passaria a chamar ao menu "Setplay" de "Test" e lá dentro deixaria lá ficar as opções: Execute (Arrancar 1 match pré-configurado nas opções em baixo sempre com opção de debugging), Debug (abrir fcpdebugger), Options... (permitir parametrizar as opções de "Test" => localização de binários, etc.)
+19/06/11 FA Julgo que faz sentido no 1º step todos os jogadores estarem activos e forçares os seus posicionamentos
+
+
+== CORRECTED ==
+21/06/11 - "19/06/11 FA Não faz sentido haver 1 exit no meu about..."
+Solução: no menu help, e nao about. Corrigido. 
