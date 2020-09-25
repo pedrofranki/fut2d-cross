@@ -1,0 +1,18 @@
+Application of the FCPortugal Setplay Framework to the Helios Simulation
+2D team (http://en.sourceforge.jp/projects/rctools/ , mainly in japanese).
+
+This package depends on the FCPortugal Setplay package, freely available on
+http://sourceforge.net/projects/fcportugalsetplays/
+
+To build this package, please follow these steps:
+- ./configure --with-setplaydir=DIR (where DIR is where you downloaded the 
+FCPortugal Setplay package to)
+- make
+
+The executables will be created inside the 'src' directory. To run setplays,
+please create the necessaru setplay.conf file and place it in the 'src' 
+directory.
+
+Please check the documents with 'agent2d' on their filenames to see relevant 
+info on the Helios team.
+

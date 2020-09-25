@@ -1,0 +1,10 @@
+bhv_basic_move.cpp
+coach.conf
+player.conf
+sample_field_evaluator.cpp
+sample_field_evaluator.h
+strategy.cpp
+chain_action/action_chain_graph.cpp
+chain_action/field_evaluator.h
+chain_action/strict_check_pass_generator.cpp
+all the files on "formations-dt"
